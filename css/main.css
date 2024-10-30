@@ -22,7 +22,7 @@ body{
                 position: relative;
                 font-size: 200px;
                 color: #fff;
-                -webkit-tap-highlight-color: transparent;
+                -webkit-tap-highlight-color: transparent !important;
             }
             .unclickable{
                 pointer-events: none;
