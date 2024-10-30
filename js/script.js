@@ -88,6 +88,9 @@ function resetSettings(className) {
 
 function reset() { 
     resetSettings();
+    xScore = 0;
+    oScore = 0;
+    tieScore = 0;
     $(".x-score").html(0)
     $(".o-score").html(0)
     $(".tie-score").html(0)
