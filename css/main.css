@@ -1,0 +1,143 @@
+body{
+    background-color: #fd4153;
+    font-family: Raleway;
+    main{
+        height: 900px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .board{
+            height: 600px;
+            width: 600px;
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: 33% 33% 33%;
+            position: relative;
+            transform-origin: center;
+            animation-delay: 1s;
+            .cell{
+                border-bottom: 4px solid #01303a;
+                width: 100%;
+                cursor: pointer;
+                position: relative;
+                font-size: 200px;
+                color: #fff;
+            }
+            .unclickable{
+                pointer-events: none;
+            }
+            .x div, .o div{
+                position:relative;
+                will-change:transform;
+                -webkit-transform:translate3d(0,0,0);
+                transform:translate3d(0,0,0);
+                -webkit-animation:appear .2s cubic-bezier(0.5,1.8,0.1,1.1);
+                -moz-animation:appear .2s cubic-bezier(0.5,1.8,0.1,1.1);
+                animation:appear .2s cubic-bezier(0.5,1.8,0.1,1.1);
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                color: #01303a;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .cell:nth-child(1){
+                border-right: 4px solid #01303a;
+            }
+            .cell:nth-child(2){
+                border-right: 4px solid #01303a;
+            }
+            .cell:nth-child(4){
+                border-right: 4px solid #01303a;
+            }
+            .cell:nth-child(5){
+                border-right: 4px solid #01303a;
+            }
+            .cell:nth-child(7){
+                border-right: 4px solid #01303a;
+                border-bottom: none;
+            }
+            .cell:nth-child(8){
+                border-right: 4px solid #01303a;
+                border-bottom: none;
+            }
+            .cell:nth-child(9){
+                border-bottom: none;
+            }
+        }
+        .score-board{
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 30px;
+            color: #fff;
+            div div{
+                text-align: center;
+                width: 100%;
+                font-size: 35px;
+            }
+        }
+        .reset-btn{
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button{
+                padding: 20px 30px;
+                font-size: 20px;
+                background-color: transparent;
+                box-shadow: none;
+                outline: none;
+                border: 2px solid #fff;
+                color: #fff;
+                cursor: pointer;
+                border-radius: 5px;
+                &:hover{
+                    background-color: #fff;
+                    border: 2px solid #fff;
+                    color: #fd4153;
+                    transition-duration: .4s;
+                }
+            }
+        }
+    }
+}
+
+@-webkit-keyframes appear {
+    from {
+      -webkit-transform:scale(0.3);
+      transform:scale(0.3)
+    }
+    to {
+      -webkit-transform:scale(1);
+      transform:scale(1)
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main{
+        height: 600px !important;
+    }
+    .board{
+        width: 300px !important;
+        height: 300px !important;
+    }
+    .cell{
+        font-size: 100px !important;
+    }
+    .score-board{
+        margin-top: 50px;
+        font-size: 20px !important;
+        div div{
+            text-align: center;
+            width: 100%;
+            font-size: 25px !important;
+        }
+    }
+    .reset-btn button{
+        font-size: 16px !important;
+        padding: 15px 20px !important;
+    }
+}

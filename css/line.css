@@ -1,0 +1,122 @@
+@keyframes draw-line {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 135%;
+    }
+}
+@keyframes draw-line-columns {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+@keyframes draw-line-rows {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 97%;
+    }
+}
+/* left diagonal */
+.b-l-d::before {
+    content: "";
+    position: absolute;
+    left: 1.5%;
+    width: 720px;
+    height: 100%;
+    border-top: 5px solid #fff;
+    transform: rotate(45deg);
+    transform-origin: left top;
+    z-index: 2;
+    animation: draw-line 1s ease forwards;
+}
+/* right diagonal */
+.b-r-d::before {
+    content: "";
+    position: absolute;
+    right: 2%;
+    width: 720px;
+    height: 100%;
+    border-top: 5px solid #fff;
+    transform: rotate(-45deg);
+    transform-origin: right top;
+    z-index: 2;
+    animation: draw-line 1s ease forwards;
+}
+/* 1st row */
+.b-1-r::before {
+    content: "";
+    position: absolute;
+    top: 16%;
+    width: 100%;
+    height: 100%;
+    border-top: 5px solid #fff;
+    transform-origin: right top;
+    z-index: 2;
+    animation: draw-line-rows 1s ease forwards;
+}
+/* 2nd row */
+.b-2-r::before {
+    content: "";
+    position: absolute;
+    top: 49%;
+    width: 100%;
+    height: 100%;
+    border-top: 5px solid #fff;
+    transform-origin: right top;
+    z-index: 2;
+    animation: draw-line-rows 1s ease forwards;
+}
+/* 3rd row */
+.b-3-r::before {
+    content: "";
+    position: absolute;
+    top: 82%;
+    width: 100%;
+    height: 100%;
+    border-top: 5px solid #fff;
+    transform-origin: right top;
+    z-index: 2;
+    animation: draw-line-rows 1s ease forwards;
+}
+/* 1st column */
+.b-1-c::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 16%;
+    width: 5px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 2;
+    animation: draw-line-columns 1s ease backwards;
+}
+/* 2nd column */
+.b-2-c::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 49%;
+    width: 5px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 2;
+    animation: draw-line-columns 1s ease backwards;
+}
+/* 3rd column */
+.b-3-c::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 82%;
+    width: 5px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 2;
+    animation: draw-line-columns 1s ease backwards;
+}
