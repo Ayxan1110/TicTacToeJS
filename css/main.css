@@ -22,7 +22,15 @@ body{
                 position: relative;
                 font-size: 200px;
                 color: #fff;
+                outline: none !important;
                 -webkit-tap-highlight-color: transparent !important;
+            }
+            .cell:focus {
+                background-color: transparent !important;
+            }
+            
+            .cell:active {
+                background-color: transparent !important;
             }
             .unclickable{
                 pointer-events: none;
